@@ -1,9 +1,8 @@
 'use client';
-import { cn } from "../../utils/cn";
+import { cn } from "@/utils/cn";
 import { BackgroundGradientAnimation } from "./GradientAnimation";
 import { GlobeDemo } from "./GridGlobe";
 import MagicButton from "./MagicButton";
-// import { GridGlobe } from "./GridGlobe";
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "react-lottie";
