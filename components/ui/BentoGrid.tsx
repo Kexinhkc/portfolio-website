@@ -1,6 +1,6 @@
 'use client';
 import { cn } from "@/utils/cn";
-import { BackgroundGradientAnimation } from "./GradientAnimation";
+// import { BackgroundGradientAnimation } from "./GradientAnimation";
 import { GlobeDemo } from "./GridGlobe";
 import MagicButton from "./MagicButton";
 import { useState } from "react";
