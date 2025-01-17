@@ -49,7 +49,7 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
   const leftLists = ["ReactJS", "NextJS", "Typescript"];
-  const rightLists = ["NodeJS", "ExpressJS", "MongoDB"];
+  const rightLists = ["NodeJS", "MongoDB", "AWS"];
 
   const [copied, setCopied] = useState(false);
 
@@ -127,7 +127,7 @@ export const BentoGridItem = ({
           {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
           {/* remove mb-2 mt-2 */}
           <div
-            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
+            className={`font-sans text-lg lg:text-2xl font-bold z-10 ${id === 1 ? 'max-w-[490px]' : 'max-w-96'}`}
           >
             {title}
           </div>
