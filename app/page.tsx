@@ -12,7 +12,7 @@ export default function Home() {
     <div className="max-w-7xl w-full px-6 md:px-0">
       {/* <FloatingNav navItems={navItems }/> */}
       <Hero />
-      {/* <Grid /> */}
+      <Grid />
       <RecentProjects /> 
       <Experience /> 
       <Footer />
