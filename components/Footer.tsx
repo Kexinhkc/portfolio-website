@@ -23,7 +23,7 @@ const Footer = () => {
 
       <div className="pt-8"></div>
       
-        <a href="mailto:kexin.hkc@gmail.com">
+        <a href="mailto:kayleenhuang.work@gmail.com">
           <MagicButton
             title="Contact Me"
             icon={<FaLocationArrow />}
