@@ -1,9 +1,9 @@
 'use client';
 import { cn } from "@/utils/cn";
-// import { BackgroundGradientAnimation } from "./GradientAnimation";
+import { BackgroundGradientAnimation } from "./GradientAnimation";
 import { GlobeDemo } from "./GridGlobe";
 import MagicButton from "./MagicButton";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "react-lottie";
 import animationData from "@/data/confetti.json";
@@ -50,6 +50,15 @@ export const BentoGridItem = ({
 }) => {
   const leftLists = ["ReactJS", "NextJS", "Typescript"];
   const rightLists = ["NodeJS", "MongoDB", "AWS"];
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // or a loading state
+  }
 
   const [copied, setCopied] = useState(false);
 
@@ -62,12 +71,23 @@ export const BentoGridItem = ({
     },
   };
 
-  const handleCopy = () => {
-    const text = "kexin.hkc@gmail.com";
-    navigator.clipboard.writeText(text);
-    setCopied(true);
-  };
+  // const handleCopy = () => {
+  //   const text = "kexin.hkc@gmail.com";
+  //   navigator.clipboard.writeText(text);
+  //   setCopied(true);
+  // };
 
+  const handleCopy = async () => {
+    if (typeof window !== 'undefined') {
+      const text = "kexin.hkc@gmail.com";
+      try {
+        await navigator.clipboard.writeText(text);
+        setCopied(true);
+      } catch (err) {
+        console.error('Failed to copy text: ', err);
+      }
+    }
+  };
   return (
     <div
       className={cn(
@@ -109,9 +129,9 @@ export const BentoGridItem = ({
         </div>
         {id === 6 && (
           // add background animation , remove the p tag
-          // <BackgroundGradientAnimation>
+          <BackgroundGradientAnimation>
             <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
-          // </BackgroundGradientAnimation>
+         </BackgroundGradientAnimation>
         )}
 
         <div
