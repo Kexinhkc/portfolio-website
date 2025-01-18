@@ -50,15 +50,15 @@ export const BentoGridItem = ({
 }) => {
   const leftLists = ["ReactJS", "NextJS", "Typescript"];
   const rightLists = ["NodeJS", "MongoDB", "AWS"];
-  const [isClient, setIsClient] = useState(false);
+  // const [isClient, setIsClient] = useState(false);
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  // useEffect(() => {
+  //   setIsClient(true);
+  // }, []);
 
-  if (!isClient) {
-    return null; // or a loading state
-  }
+  // if (!isClient) {
+  //   return null; // or a loading state
+  // }
 
   const [copied, setCopied] = useState(false);
 
