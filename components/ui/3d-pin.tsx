@@ -51,7 +51,7 @@ export const PinContainer = ({
           style={{
             transform: transform,
           }}
-          className=" group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
+          className=" group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden border border-white/[0.1] rounded-2xl p-4 "
         >
           <div className={cn( className)}>{children}</div>
         </div>

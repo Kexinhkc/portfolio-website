@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/3d-pin";
 import { FaLocationArrow } from "react-icons/fa";
+import TechIcon from "./TechIcon";
 
 const RecentProjects = () => {
+
   return (
     <div className="pt-20 md:pt-32" id="projects">
       <h1 className="heading">
@@ -11,10 +13,10 @@ const RecentProjects = () => {
         <span className="text-purple">My Projects</span>
       </h1>
       <div id="outsidemapdiv" className="flex flex-wrap items-center justify-center p-4 gap-y-[20px] sm:gap-y-[35px] lg:gap-[40px] 2xl:gap-[60px] mt-[20px]">
-        {projects.map(({ id, title, des, img, iconLists, link }) => (
+        {projects.map(({ id, title, des, img, iconLists,iconNames, link }) => (
           // sm:h-[41rem] lg:min-h-[39rem] xl:max-h-[10rem]
 
-          <div id="outerpindiv" key={id} className="flex items-center justify-center p-4 border border-white/[0.1] rounded-2xl h-[28rem] lg:min-h-[38rem] w-[80vw] sm:w-[40vw] ">
+          <div id="outerpindiv" key={id} className="flex items-center justify-center h-[28rem] lg:min-h-[38rem] w-[80vw] sm:w-[40vw] ">
              <PinContainer
               title={link}
               href={link}
@@ -51,21 +53,15 @@ const RecentProjects = () => {
                 {des}
               </p>
 
-              <div className="flex items-center justify-between mt-7 mb-3">
-                <div className="flex items-center">
-                  {iconLists.map((icon, index) => (
-                    <div
-                      key={index}
-                      className="border border-white/[.2] rounded-full bg-black w-8 h-8 lg:w-10 lg:h-10 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}
-                    >
-                      <img src={icon} alt="icon5" className="p-2" />
-                    </div>
-                  ))}
-                </div>
+              <p className="text-sm text-purple mt-7">Tech Stack Used: </p>
 
+              <div className="flex items-center justify-between mt-2.5 mb-3">
+              
+
+                <div className="flex items-center">
+                    <TechIcon icons={iconLists} iconName={iconNames}  />
+                </div>
+              
                 
                   <a href={link}>
                   <div className="flex justify-center items-center">

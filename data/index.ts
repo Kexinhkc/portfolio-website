@@ -76,6 +76,7 @@ export const navItems = [
       des: "An responsive information website for a finance company displaying the services they offer and contact information.",
       img: "/oz-premium-1.png",
       iconLists: ["/re.svg", "/material-ui.svg", "/ts.svg", "/react-hook-form.svg", "/sanity.svg"],
+      iconNames:["React.js", "Material UI", "Typescript", "React Hook Form", "Sanity"],
       link: "https://ozpremiumfinance.com.au/",
     },
     {
@@ -84,6 +85,7 @@ export const navItems = [
       des: "Online presence of a local Asian grocery store, showcasing their products, services and contact information.",
       img: "/chhoung_phat.png",
       iconLists: ["/next.svg", "/material-ui-1.svg", "/ts.svg", "/google-map-icon.svg"],
+      iconNames:["Next.js", "Material UI", "Typescript", "Google Map"],
       link: "https://chhoung-phat-asian-grocery-website.vercel.app/",
     },
     // {
